@@ -24,7 +24,7 @@ function initMap() {
                 stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
         };
         let map = new google.maps.Map(mapElement, mapOptions);
-        let image = '../img/marker/marker.png';
+        let image = './img/marker/marker.png';
         let content = document.createElement('div');
         content.innerHTML = "<div class="+"map-tooltip"+"><h4><strong>"+maptooltipbold+"</strong></h4><hr>"+"<h5>"+maptooltip+"</h5></div>";
         let infowindow = new google.maps.InfoWindow({
