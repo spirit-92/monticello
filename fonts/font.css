@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'Gotham-bold';
+	src: url('./gothambold/gothambold1.eot');
+	src: url('./gothambold/gothambold1.eot?#iefix') format('embedded-opentype'),
+	url('./gothambold/gothambold1.woff') format('woff'),
+	url('./gothambold/gothambold1.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('./GothamBook/GothamBook.eot');
+	src: url('./GothamBook/GothamBook.eot?#iefix') format('embedded-opentype'),
+	url('./GothamBook/GothamBook.woff') format('woff'),
+	url('./GothamBook/GothamBook.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham-Medium';
+	src: url('./GothamMedium/GothamMedium.eot');
+	src: url('./GothamMedium/GothamMedium.eot?#iefix') format('embedded-opentype'),
+	url('./GothamMedium/Gotham-Medium.woff') format('woff'),
+	url('./GothamMedium/GothamMedium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('./OpenSans/OpenSans.eot');
+	src: url('./OpenSans/OpenSans.eot?#iefix') format('embedded-opentype'),
+	url('./OpenSans/OpenSans-Regular.woff') format('woff'),
+	url('./OpenSans/OpenSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans-Italic';
+	src: url('./OpenSans/OpenSans-Italic.eot');
+	src: url('./OpenSans/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+	url('./OpenSans/OpenSans-Italic.woff') format('woff'),
+	url('./OpenSans/OpenSans-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Icons */
+@font-face
+{
+	font-family: 'slick';
+	font-weight: normal;
+	font-style: normal;
+
+	src: url('./slick/slick.eot');
+	src: url('./slick/slick.eot?#iefix') format('embedded-opentype'), url('./slick/slick.woff') format('woff'), url('./slick/slick.ttf') format('truetype'), url('./slick/slick.svg#slick') format('svg');
+}
+.slick-loading .slick-list
+{
+	background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
