@@ -51,10 +51,10 @@ function blackThem(classStyle){
 window.onscroll = function() {
     let scrolled = parseInt(document.documentElement.scrollTop);
     console.log(scrolled);
-    if (scrolled > 0 && scrolled < 958){
+    if (scrolled > 0 && scrolled < 870){
         whiteThem(about_us_check)
     }
-    else if (scrolled > 958 && scrolled < 2544){
+    else if (scrolled > 870 && scrolled < 2544){
         blackThem(projectsCheck);
     }
     else if (scrolled > 2650 && scrolled< 3707 ){
