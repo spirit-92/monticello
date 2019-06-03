@@ -47,20 +47,93 @@ function blackThem(classStyle){
     });
     classStyle.style.backgroundColor = 'black';
 }
+let createHTML={
+    createteSection2:function () {
+        $.ajax({
+    url: "./html-section/project_2.html",
+    cache: false
+        }).done(function( html ) {
+        $( "#project" ).append( html );
+    });
+        createHTML.createteSection2 = null;
+        return 1
+    },
+    createteNews:function () {
+        $.ajax({
+            url: "./html-section/news.html",
+            cache: false
+        }).done(function(html) {
+                $( "#project" ).after(html);
+                $('.js-slide-news').slick({
+                    dots: true,
+                    dotsClass:'slick-dots2',
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    arrows: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding:'30px',
+                    variableWidth: true
+                });
+            });
+        createHTML.createteNews = null;
+        return 1
+    },
+    createteGallery:function () {
+        $.ajax({
+            url: "./html-section/gallery.html",
+            cache: false
+        }).done(function(html) {
+                $( "#news" ).after(html);
+                });
+        createHTML.createteGallery = null;
+        return 1
+    },
+    createMap_Form:function () {
+        $.ajax({
+            url: "./html-section/map_form.html",
+            cache: false
+        }).done(function(html) {
+            $( "#gallery" ).after(html);
+        });
+        createHTML.createMap_Form = null;
+        return 1
+    },
+};
 
 window.onscroll = function() {
     let scrolled = parseInt(document.documentElement.scrollTop);
-    console.log(scrolled);
-    if (scrolled > 0 && scrolled < 840){
-        whiteThem(about_us_check)
+    // console.log(scrolled);
+    if (scrolled >= 0 && scrolled < 740){
+        whiteThem(about_us_check);
+        if (typeof createHTML.createteSection2 === 'function') {
+            createHTML.createteSection2()
+        }
     }
-    else if (scrolled > 842 && scrolled < 2544){
+    else if (scrolled > 642 && scrolled < 2544){
         blackThem(projectsCheck);
+        if (typeof createHTML.createteNews === 'function') {
+            createHTML.createteNews()
+        }
     }
     else if (scrolled > 2650 && scrolled< 3707 ){
-        whiteThem(newsCheck)
+        whiteThem(newsCheck);
+        if (typeof createHTML.createteGallery === 'function') {
+            createHTML.createteGallery()
+        }
     }
     else if (scrolled > 3710 && scrolled< 5200){
         blackThem(contactCheck);
+        if (typeof createHTML.createMap_Form === 'function') {
+            createHTML.createMap_Form()
+        }
     }
+
 };
+//get top after reload document
+if (location.reload){
+    $('html, body').animate({
+        scrollTop: 0
+    }, 1000);
+}

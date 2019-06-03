@@ -1,0 +1,44 @@
+<section id="gallery" class="gallery">
+    <div class="container">
+        <div class="title-section"><span class="projects_h2-black">gallery</span></div>
+        <div class="gallery-container">
+            <div class="gallery-foto gallery-item-1">
+                <div class="hover-gallery"><img src="img/section№4/foto-1.jpg" alt="gallery"></div>
+            </div>
+            <div class="gallery-foto gallery-item-2">
+                <div class="hover-gallery"><img src="img/section№4/foto-2.jpg" alt="gallery"></div>
+                <div class="hover-gallery"><img src="img/section№4/foto-3.jpg" alt="gallery"></div>
+            </div>
+            <div class="gallery-foto gallery-item-3">
+                <div class="hover-gallery"><img src="img/section№4/foto-4.jpg" alt="gallery"></div>
+                <div class="hover-gallery"><img src="img/section№4/foto-5.jpg" alt="gallery"></div>
+            </div>
+        </div><!--js gallery-->
+        <div class="js-gallery">
+            <div class="gallery-container">
+                <div class="gallery-foto gallery-item-1">
+                    <div class="hover-gallery"><img src="img/section№4/foto-1.jpg" alt="gallery"></div>
+                </div>
+                <div class="gallery-foto gallery-item-2">
+                    <div class="hover-gallery"><img src="img/section№4/foto-2.jpg" alt="gallery"></div>
+                    <div class="hover-gallery"><img src="img/section№4/foto-3.jpg" alt="gallery"></div>
+                </div>
+                <div class="gallery-foto gallery-item-3">
+                    <div class="hover-gallery"><img src="img/section№4/foto-4.jpg" alt="gallery"></div>
+                    <div class="hover-gallery"><img src="img/section№4/foto-5.jpg" alt="gallery"></div>
+                </div>
+            </div>
+        </div><!--/js gallery-->
+        <div class="btn btn-gallery js-btn-gallery">
+            <button class="btn-more">see more</button>
+        </div>
+    </div>
+    <script>
+        let btnGallery = $('.btn-more');
+        let showGallery = $('.js-gallery');
+
+        btnGallery.click(function() {
+            showGallery.slideToggle( "slow" );
+        });
+    </script>
+</section>
